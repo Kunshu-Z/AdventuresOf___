@@ -38,9 +38,10 @@
             titleLabel.AutoSize = true;
             titleLabel.Font = new Font("Verdana", 16F, FontStyle.Bold, GraphicsUnit.Point);
             titleLabel.ForeColor = SystemColors.ButtonHighlight;
-            titleLabel.Location = new Point(225, 75);
+            titleLabel.Location = new Point(158, 45);
+            titleLabel.Margin = new Padding(2, 0, 2, 0);
             titleLabel.Name = "titleLabel";
-            titleLabel.Size = new Size(350, 38);
+            titleLabel.Size = new Size(242, 26);
             titleLabel.TabIndex = 1;
             titleLabel.Text = "Adventures of ___";
             titleLabel.Click += titleLabel_Click;
@@ -48,9 +49,10 @@
             // startButton
             // 
             startButton.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            startButton.Location = new Point(335, 169);
+            startButton.Location = new Point(234, 101);
+            startButton.Margin = new Padding(2, 2, 2, 2);
             startButton.Name = "startButton";
-            startButton.Size = new Size(128, 46);
+            startButton.Size = new Size(90, 28);
             startButton.TabIndex = 2;
             startButton.Text = "Start";
             startButton.UseVisualStyleBackColor = true;
@@ -59,9 +61,10 @@
             // quitButton
             // 
             quitButton.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            quitButton.Location = new Point(335, 264);
+            quitButton.Location = new Point(234, 158);
+            quitButton.Margin = new Padding(2, 2, 2, 2);
             quitButton.Name = "quitButton";
-            quitButton.Size = new Size(128, 46);
+            quitButton.Size = new Size(90, 28);
             quitButton.TabIndex = 3;
             quitButton.Text = "Quit";
             quitButton.UseVisualStyleBackColor = true;
@@ -69,15 +72,17 @@
             // 
             // Title
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(560, 270);
             Controls.Add(quitButton);
             Controls.Add(startButton);
             Controls.Add(titleLabel);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "Title";
             Text = "Title";
+            Load += Title_Load;
             ResumeLayout(false);
             PerformLayout();
         }

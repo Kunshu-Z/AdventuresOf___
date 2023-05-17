@@ -38,18 +38,19 @@
             gameTxtLbl.BorderStyle = BorderStyle.Fixed3D;
             gameTxtLbl.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point);
             gameTxtLbl.ForeColor = SystemColors.ButtonHighlight;
-            gameTxtLbl.Location = new Point(11, 13);
+            gameTxtLbl.Location = new Point(8, 8);
+            gameTxtLbl.Margin = new Padding(2, 0, 2, 0);
             gameTxtLbl.Name = "gameTxtLbl";
-            gameTxtLbl.Size = new Size(777, 266);
+            gameTxtLbl.Size = new Size(544, 160);
             gameTxtLbl.TabIndex = 0;
-            gameTxtLbl.Text = "Game Text";
             // 
             // button1
             // 
             button1.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(101, 338);
+            button1.Location = new Point(71, 203);
+            button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(149, 52);
+            button1.Size = new Size(104, 31);
             button1.TabIndex = 1;
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
@@ -57,24 +58,27 @@
             // button2
             // 
             button2.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(567, 338);
+            button2.Location = new Point(397, 203);
+            button2.Margin = new Padding(2);
             button2.Name = "button2";
-            button2.Size = new Size(149, 52);
+            button2.Size = new Size(104, 31);
             button2.TabIndex = 2;
             button2.Text = "button2";
             button2.UseVisualStyleBackColor = true;
             // 
             // Gameplay
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(560, 270);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(gameTxtLbl);
+            Margin = new Padding(2);
             Name = "Gameplay";
             Text = "Gameplay";
+            Load += Gameplay_Load;
             ResumeLayout(false);
         }
 

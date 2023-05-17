@@ -15,6 +15,11 @@ namespace AdventuresOf___
         public Title()
         {
             InitializeComponent();
+            this.CenterToScreen(); //To center the game to the screen
+        }
+
+        private void Title_Load(object sender, EventArgs e)
+        {
         }
 
         private void titleLabel_Click(object sender, EventArgs e)
@@ -32,6 +37,5 @@ namespace AdventuresOf___
         {
             Close();
         }
-
     }
 }
