@@ -23,7 +23,13 @@ namespace AdventuresOf___
             this.CenterToScreen(); //To center the game to the screen
         }
 
-        private void Gameplay_Load(object sender, EventArgs e) { CreateGame(); } //Moving {} so it takes less space
+        private void Gameplay_Load(object sender, EventArgs e)
+        {
+            CreateGame();
+            button1.Click += button1_Click;
+            button2.Click += button2_Click;
+            Go();
+        } //Moving {} so it takes less space
 
         private void DisplayGame(string addText, bool clear = false)
         {
@@ -48,12 +54,28 @@ namespace AdventuresOf___
                 "2. Pickpocket"));
         }
 
+        private void Go()
+        {
+            CurrentArea = dictArea["Village"];
+            StartGame();
+        }
+
         private void StartGame()
         {
             DisplayGame($"{CurrentArea.areaDisplay}, {CurrentArea.areaDescription}", true);
             this.Text = $"{CurrentArea.areaDisplay} - {CurrentArea.areaDescription}";
             OptionOne = CurrentArea.optionOne;
             OptionTwo = CurrentArea.optionTwo;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
