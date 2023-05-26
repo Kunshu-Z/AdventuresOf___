@@ -62,7 +62,7 @@ namespace AdventuresOf___
 
         private void StartGame()
         {
-            DisplayGame($"{CurrentArea.areaDisplay}, {CurrentArea.areaDescription}", true);
+            DisplayGame($"{CurrentArea.areaDescription}", true);
             this.Text = $"{CurrentArea.areaDisplay} - {CurrentArea.areaDescription}";
             OptionOne = CurrentArea.optionOne;
             OptionTwo = CurrentArea.optionTwo;

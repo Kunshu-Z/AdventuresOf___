@@ -1,6 +1,6 @@
 ﻿namespace AdventuresOf___
 {
-    partial class Gameplay
+    partial class Start
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             gameTxtLbl = new Label();
-            button1 = new Button();
-            button2 = new Button();
+            textBox1 = new TextBox();
             SuspendLayout();
             // 
             // gameTxtLbl
@@ -38,52 +37,36 @@
             gameTxtLbl.BorderStyle = BorderStyle.Fixed3D;
             gameTxtLbl.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point);
             gameTxtLbl.ForeColor = SystemColors.ButtonHighlight;
-            gameTxtLbl.Location = new Point(11, 13);
+            gameTxtLbl.Location = new Point(11, 9);
             gameTxtLbl.Name = "gameTxtLbl";
-            gameTxtLbl.Size = new Size(777, 267);
-            gameTxtLbl.TabIndex = 0;
+            gameTxtLbl.Size = new Size(777, 376);
+            gameTxtLbl.TabIndex = 1;
             // 
-            // button1
+            // textBox1
             // 
-            button1.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(101, 338);
-            button1.Name = "button1";
-            button1.Size = new Size(149, 52);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            textBox1.BackColor = SystemColors.InactiveCaptionText;
+            textBox1.Location = new Point(230, 407);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(349, 31);
+            textBox1.TabIndex = 2;
             // 
-            // button2
-            // 
-            button2.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(556, 338);
-            button2.Name = "button2";
-            button2.Size = new Size(149, 52);
-            button2.TabIndex = 2;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // Gameplay
+            // Start
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(800, 450);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(textBox1);
             Controls.Add(gameTxtLbl);
-            Name = "Gameplay";
-            Text = "Gameplay";
-            Load += Gameplay_Load;
+            Name = "Start";
+            Text = "Start";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Label gameTxtLbl;
-        private Button button1;
-        private Button button2;
+        private TextBox textBox1;
     }
 }
