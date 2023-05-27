@@ -2,6 +2,7 @@ namespace AdventuresOf___
 {
     internal static class Program
     {
+        public static string playerName = null;
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
@@ -11,7 +12,7 @@ namespace AdventuresOf___
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Title());
+            Application.Run(new Start());
         }
     }
 }

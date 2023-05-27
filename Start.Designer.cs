@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             gameTxtLbl = new Label();
-            textBox1 = new TextBox();
+            PlayerName = new TextBox();
+            Confirm = new Button();
             SuspendLayout();
             // 
             // gameTxtLbl
@@ -37,27 +38,45 @@
             gameTxtLbl.BorderStyle = BorderStyle.Fixed3D;
             gameTxtLbl.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point);
             gameTxtLbl.ForeColor = SystemColors.ButtonHighlight;
-            gameTxtLbl.Location = new Point(11, 9);
+            gameTxtLbl.Location = new Point(8, 5);
+            gameTxtLbl.Margin = new Padding(2, 0, 2, 0);
             gameTxtLbl.Name = "gameTxtLbl";
-            gameTxtLbl.Size = new Size(777, 376);
+            gameTxtLbl.Size = new Size(544, 226);
             gameTxtLbl.TabIndex = 1;
+            gameTxtLbl.Text = "Light... All I see is light... What is my name?";
             // 
-            // textBox1
+            // PlayerName
             // 
-            textBox1.BackColor = SystemColors.InactiveCaptionText;
-            textBox1.Location = new Point(230, 407);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(349, 31);
-            textBox1.TabIndex = 2;
+            PlayerName.BackColor = SystemColors.InactiveCaptionText;
+            PlayerName.ForeColor = SystemColors.Window;
+            PlayerName.Location = new Point(156, 243);
+            PlayerName.Margin = new Padding(2);
+            PlayerName.Name = "PlayerName";
+            PlayerName.Size = new Size(246, 23);
+            PlayerName.TabIndex = 2;
+            // 
+            // Confirm
+            // 
+            Confirm.BackColor = Color.Black;
+            Confirm.ForeColor = SystemColors.ControlLightLight;
+            Confirm.Location = new Point(421, 243);
+            Confirm.Name = "Confirm";
+            Confirm.Size = new Size(75, 23);
+            Confirm.TabIndex = 3;
+            Confirm.Text = "Confirm";
+            Confirm.UseVisualStyleBackColor = false;
+            Confirm.Click += Confirm_Click;
             // 
             // Start
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(800, 450);
-            Controls.Add(textBox1);
+            ClientSize = new Size(560, 270);
+            Controls.Add(Confirm);
+            Controls.Add(PlayerName);
             Controls.Add(gameTxtLbl);
+            Margin = new Padding(2);
             Name = "Start";
             Text = "Start";
             ResumeLayout(false);
@@ -67,6 +86,7 @@
         #endregion
 
         private Label gameTxtLbl;
-        private TextBox textBox1;
+        private TextBox PlayerName;
+        private Button Confirm;
     }
 }

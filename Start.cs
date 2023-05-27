@@ -16,5 +16,19 @@ namespace AdventuresOf___
         {
             InitializeComponent();
         }
+
+        private void Confirm_Click(object sender, EventArgs e)
+        {
+            Program.playerName = PlayerName.Text;
+            var title = new Title();
+            title.FormClosed += Title_FormClosed;
+            title.Show();
+            this.Hide();
+        }
+
+        private void Title_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

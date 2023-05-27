@@ -29,10 +29,15 @@ namespace AdventuresOf___
 
         private void startButton_Click(object sender, EventArgs e)
         {
-            var startGame = new Gameplay();
-            var title = new Title();
-            startGame.Show();
-            title.Close();
+            var gameplay = new Gameplay();
+            gameplay.FormClosed += Gameplay_FormClosed;
+            gameplay.Show();
+            this.Hide();
+        }
+
+        private void Gameplay_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close();
         }
 
         private void quitButton_Click(object sender, EventArgs e)
