@@ -12,9 +12,11 @@ namespace AdventuresOf___
 {
     public partial class Start : Form
     {
+        Player player = new Player();
         public Start()
         {
             InitializeComponent();
+            this.CenterToScreen(); //To center the game to the screen
         }
 
         private void Confirm_Click(object sender, EventArgs e)
