@@ -16,7 +16,7 @@ namespace AdventuresOf___
         {
             InitializeComponent();
             this.CenterToScreen(); //To center the game to the screen
-            PlayerName.Text = Program.playerName;
+            PlayerName.Text = "Adventures of " + Program.playerName;
         }
 
         private void Title_Load(object sender, EventArgs e)
