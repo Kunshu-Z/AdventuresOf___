@@ -40,7 +40,6 @@ namespace AdventuresOf___
             }
             //New text is added to existing text
             gameTxtLbl.Text += addText;
-            button1.Text += addText;
         }
 
         //Method for adding new areas into dictionary
@@ -73,6 +72,12 @@ namespace AdventuresOf___
                 $"Stranger: Hey! What are you doing?! GET BACK HERE!\n*After reaching a safe space within the village...*\n{Program.playerName}: Right, looks like I'm away from him",
                 "Inquire about the place",
                 "Pickpocket"));
+
+            dictArea.Add("Test", new Area("Test",
+                "Village Mart",
+                "Stranger2: Oh, hello! What can I help you with?",
+                "Inquire about the place",
+                "Pickpocket"));
         }
 
         //Method to start the game at the starting point
@@ -86,7 +91,7 @@ namespace AdventuresOf___
         {
             //To display the text in the textbox + title of form
             DisplayGame($"{CurrentArea.areaDescription}", true);
-            this.Text = $"{CurrentArea.areaDisplay} - {CurrentArea.areaDescription}";
+            this.Text = $"{CurrentArea.areaDisplay}";
             //Calling ChangeOptions to change the buttons to the respective scenario
             ChangeOptions();
         }
@@ -133,6 +138,7 @@ namespace AdventuresOf___
                     }
                     break;
             }
+            
         }
     }
 }
