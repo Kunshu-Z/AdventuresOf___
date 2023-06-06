@@ -27,8 +27,6 @@ namespace AdventuresOf___
         private void Gameplay_Load(object sender, EventArgs e)
         {
             CreateGame();
-            button1.Click += button1_Click;
-            button2.Click += button2_Click;
             Go();
         }
 
@@ -49,7 +47,9 @@ namespace AdventuresOf___
             //Location one - Neutral
             dictArea.Add("Starting", new Area("Starting",
                 "Village Hut",
-                $"...\n...\n*Inaudible noise*\n{Program.playerName}: Ugh, what happened?\nWhere am I?\n*Stands up*\nI gotta ask someone what this place is",
+                $"...\n...\n*Inaudible noise*\n{Program.playerName}: Ugh, what happened?\nWhere am I?\n*Stands up*\nI gotta ask someone what this place is" +
+                $"Last time I remember, I was out in the fields before a beast appeared out of the ground\n...\nWhy are some people giving me a strange glance...\n" +
+                $"I gotta ask someone about this place\n*Approaches person*",
                 "Continue",
                 "--|--"));
 
@@ -62,18 +62,34 @@ namespace AdventuresOf___
             //Location two - Light
             dictArea.Add("Inquiry", new Area("Inquiry",
                 "Village Mart",
-                "Oh, you're a newcomer huh? Well, this is Saber Village.\nWe're currently in the market area, so it's not the best place to get information here. Go and visit the Saber Guild just down the road, they'll help you out.",
+                "Stranger: Oh, you're a newcomer huh? Well, this is Saber Village.\nWe're currently in the market area, so it's not the best place to get information here. Go and visit the Saber Guild just down the road, they'll help you out.",
                 "Go over to the Saber Guild",
                 "Insult the man"));
 
-            dictArea.Add("Saber Guild", new Area("Saber Guild",
-                "Village Mart",
+            dictArea.Add("Road to Saber Guild", new Area("Road to Saber Guild",
+                "Village Road",
                 $"{Program.playerName}: Thanks stranger, I'll head over to the guild right now!\nStranger: You're welcome, take care now.\n" +
                 $"You walk to the building with the huge sign down the road and walk to the door.\nSuddenly a large bulky man bursts through, shoving you to the ground.\n" +
                 $"{Program.playerName}: Arrgh watch i- WOAH YOU'RE HUGE!!!\nMan: Hmph...\nIt was so sudden, the man just starts walking away\n" +
                 $"Your self esteem suddenly dropped to a new low, will you let this man just walk away after what he did?",
                 "Go to Guild",
                 "Attack the man"));
+
+            dictArea.Add("Saber Guild", new Area("Saber Guild",
+                "Saber Guild Building",
+                $"{Program.playerName}: No point in fighting that guy, I've got things to do, starting with my current area.\n" +
+                $"                     (To the sky for the Sabers)\nReceptionist: Ad caelum pro gladiis, welcome to the Saber guild.\n" +
+                $"{Program.playerName}: Um ok so do you have a map or something around here?\n*The Receptionist points to a wall with a highly embellished grand continental map \n" +
+                $"- with complementary minimaps you can take below - *\nReceptionist: Right there\n{Program.playerName}: Oh ok thanks then\n",
+                "Continue",
+                "--|--"));
+
+            dictArea.Add("Map Selection", new Area("Map Selection",
+                "Saber Guild",
+                $"{Program.playerName} inspects the map carefully, an open field where you may have blacked out.\nYou find two open fields on the map; Old Saber battlefield and the Sea of Wheat\n" +
+                $"Clearly an open abandoned battlefield may have some beasts roaming around but who knows,\n maybe the Sea of Wheat might have some clues, it's a small world after all.",
+                "Go to Old Saber Battlefield",
+                "Go to Sea of Wheat"));
 
             dictArea.Add("Pickpocket", new Area("Pickpocket",
                 "Village Mart",
@@ -113,13 +129,7 @@ namespace AdventuresOf___
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ProcessOption(currentOption);
-
-            if (currentOption == 1)
-            {
-                currentOption = 1;
-                button1.Text = CurrentArea.optionOne; button2.Text = CurrentArea.optionTwo;
-            }
+            ProcessOption(1);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -134,7 +144,27 @@ namespace AdventuresOf___
                 case 1:
                     if (CurrentArea.areaName == "Starting")
                     {
+                        CurrentArea = dictArea["Village"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Village")
+                    {
+                        CurrentArea = dictArea["Inquiry"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Inquiry")
+                    {
+                        CurrentArea = dictArea["Road to Saber Guild"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Road to Saber Guild")
+                    {
                         CurrentArea = dictArea["Saber Guild"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Saber Guild")
+                    {
+                        CurrentArea = dictArea["Map Selection"];
                         StartGame();
                     }
                     break;
@@ -142,15 +172,8 @@ namespace AdventuresOf___
                 case 2:
                     if (CurrentArea.areaName == "Village")
                     {
-                        CurrentArea = dictArea["Inquiry"];
+                        CurrentArea = dictArea["Pickpocket"];
                         StartGame();
-                    }
-                    break;
-
-                case 3:
-                    if (CurrentArea.areaName == "Inquiry")
-                    {
-                        
                     }
                     break;
             }
