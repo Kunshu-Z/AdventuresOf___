@@ -12,7 +12,7 @@ namespace AdventuresOf___
         public string areaName { get; set; }
         public string areaDisplay { get; set; }
         public string areaDescription { get; set; }
-        public string optionOne { get; set; }   
+        public string optionOne { get; set; }
         public string optionTwo { get; set; }
 
         //Constructor for Area

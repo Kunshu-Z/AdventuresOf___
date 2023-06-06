@@ -115,7 +115,7 @@ namespace AdventuresOf___
 
         private void ProcessOption(int option)
         {
-            switch (option) 
+            switch (option)
             {
                 case 1:
                     if (CurrentArea.areaName == "Starting")
@@ -123,11 +123,7 @@ namespace AdventuresOf___
                         CurrentArea = dictArea["Village"];
                         StartGame();
                     }
-                    else if (CurrentArea.areaName == "Village")
-                    {
-                        CurrentArea = dictArea["Inquiry"];
-                        StartGame();
-                    }
+
                     break;
 
                 case 2:
@@ -136,9 +132,22 @@ namespace AdventuresOf___
                         CurrentArea = dictArea["Pickpocket"];
                         StartGame();
                     }
+                    else if (CurrentArea.areaName == "Pickpocket")
+                    {
+                        CurrentArea = dictArea["Village"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Inquiry")
+                    {
+                        CurrentArea = dictArea["Village"]; // Go back to Village scenario
+                        StartGame();
+                    }
                     break;
             }
-            
         }
+
+
+
+
     }
 }
