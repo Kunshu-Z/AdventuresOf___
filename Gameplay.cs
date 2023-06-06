@@ -7,15 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace AdventuresOf___
 {
     public partial class Gameplay : Form
     {
         private Area CurrentArea;
-        private string OptionOne;
-        private string OptionTwo;
-        private int currentOption = 1;
         //Dictionary containing all areas of the game
         private Dictionary<string, Area> dictArea = new Dictionary<string, Area>();
         public Gameplay()
@@ -90,6 +88,47 @@ namespace AdventuresOf___
                 $"Clearly an open abandoned battlefield may have some beasts roaming around but who knows,\n maybe the Sea of Wheat might have some clues, it's a small world after all.",
                 "Go to Old Saber Battlefield",
                 "Go to Sea of Wheat"));
+
+            dictArea.Add("Weapon Selection", new Area("Weapon Selection",
+                "Saber Guild",
+                $"{Program.playerName} chooses to go to the Old Saber Battlefield, a remnant of a more chaotic age for the Sabers" +
+                $"who attacked each other in a bloody civil war, {Program.playerName} realizes the dangers and needs a weapon.\n" +
+                $"{Program.playerName}: Excuse me miss receptionist, I might not be a member of the guild but do you have any weapons I could use for my journey?\n" +
+                $"Receptionist: Certainly, we have 2 lost weapons in our posession, they weren't claimed by their owners so you may have one.\n" +
+                $"She points to a slightly rusted sword (a saber to be exact) and an unremarkable bow and a quiver of 20 arrows.",
+                "Choose the Sword",
+                "Choose the Bow"));
+
+            dictArea.Add("Hour One", new Area("Hour One",
+                "Road to Saber BattleField",
+                "Hour One\nOn the road you pass a traveler who says not a single word, just a stare - a glare even - into your eyes, then keeps walking on.",
+                "Continue",
+                "--|--"));
+
+            dictArea.Add("Hour Two", new Area("Hour Two",
+                "Road to Saber BattleField",
+                "Hour Two\nYou get tired and rest beside a tree trunk, a few deer graze on some grass a few trees down.",
+                "Continue",
+                "--|--"));
+
+            dictArea.Add("Hour Three", new Area("Hour Three",
+                "Road to Saber BattleField",
+                "Hour Three\nYou get back up and continue, you come across an abandoned wooden barrel, nothing was inside.",
+                "Continue",
+                "--|--"));
+
+            dictArea.Add("Hour Three & a Half", new Area("Hour Three & a Half",
+                "Saber BattleField",
+                $"Hour Three & a Half\nYou come to a clearing, two old swords thrust in the ground long ago after the battles here, to mark the battleground.\n" +
+                $"It's a quiet place with little vegetation, almost only dirt with old weapons lain about. Grim.\n" +
+                $"(Maybe this is where that beast is, I never really got a good look at it)\nYou start searching around for anything, anything at all.\n" +
+                $"... nothing\n... nothing\n...something?...nothing\n{Program.playerName}: There's nothing here! Just rusty old swords and shields.\n" +
+                $"You pick a shield to inspect it, holding it up to your face you suddenly feel a large thud on the face of the shield.\n" +
+                $"A sharp needle pierced the shield, bewildered, you look up and see a huge beast a tail with needles at the end, \na face like a lizard, almost draconic, " +
+                $"a body like a horse, with plates of armor, it's legs were like a huge cat with talons like an eagle." +
+                $"Don't just stand there! Do something!",
+                "Fight the Beast",
+                "Run away in fear"));
 
             dictArea.Add("Pickpocket", new Area("Pickpocket",
                 "Village Mart",
@@ -167,6 +206,32 @@ namespace AdventuresOf___
                         CurrentArea = dictArea["Map Selection"];
                         StartGame();
                     }
+                    else if (CurrentArea.areaName == "Map Selection")
+                    {
+                        CurrentArea = dictArea["Weapon Selection"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Weapon Selection")
+                    {
+                        CurrentArea = dictArea["Hour One"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Hour One")
+                    {
+                        CurrentArea = dictArea["Hour Two"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Hour Two")
+                    {
+                        CurrentArea = dictArea["Hour Three"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Hour Three")
+                    {
+                        CurrentArea = dictArea["Hour Three & a Half"];
+                        StartGame();
+                    }
+                    
                     break;
 
                 case 2:
@@ -178,9 +243,5 @@ namespace AdventuresOf___
                     break;
             }
         }
-
-
-
-
     }
 }
