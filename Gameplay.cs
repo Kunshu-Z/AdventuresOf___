@@ -15,6 +15,7 @@ namespace AdventuresOf___
         private Area CurrentArea;
         private string OptionOne;
         private string OptionTwo;
+        private int currentOption = 1;
         //Dictionary containing all areas of the game
         private Dictionary<string, Area> dictArea = new Dictionary<string, Area>();
         public Gameplay()
@@ -45,8 +46,6 @@ namespace AdventuresOf___
         //Method for adding new areas into dictionary
         private void CreateGame()
         {
-            var player = new Player();
-            player.playerName = "Kunshu";
             //Location one - Neutral
             dictArea.Add("Starting", new Area("Starting",
                 "Village Hut",
@@ -66,6 +65,15 @@ namespace AdventuresOf___
                 "Oh, you're a newcomer huh? Well, this is Saber Village.\nWe're currently in the market area, so it's not the best place to get information here. Go and visit the Saber Guild just down the road, they'll help you out.",
                 "Go over to the Saber Guild",
                 "Insult the man"));
+
+            dictArea.Add("Saber Guild", new Area("Saber Guild",
+                "Village Mart",
+                $"{Program.playerName}: Thanks stranger, I'll head over to the guild right now!\nStranger: You're welcome, take care now.\n" +
+                $"You walk to the building with the huge sign down the road and walk to the door.\nSuddenly a large bulky man bursts through, shoving you to the ground.\n" +
+                $"{Program.playerName}: Arrgh watch i- WOAH YOU'RE HUGE!!!\nMan: Hmph...\nIt was so sudden, the man just starts walking away\n" +
+                $"Your self esteem suddenly dropped to a new low, will you let this man just walk away after what he did?",
+                "Go to Guild",
+                "Attack the man"));
 
             dictArea.Add("Pickpocket", new Area("Pickpocket",
                 "Village Mart",
@@ -105,7 +113,13 @@ namespace AdventuresOf___
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ProcessOption(1);
+            ProcessOption(currentOption);
+
+            if (currentOption == 1)
+            {
+                currentOption = 1;
+                button1.Text = CurrentArea.optionOne; button2.Text = CurrentArea.optionTwo;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -120,27 +134,23 @@ namespace AdventuresOf___
                 case 1:
                     if (CurrentArea.areaName == "Starting")
                     {
-                        CurrentArea = dictArea["Village"];
+                        CurrentArea = dictArea["Saber Guild"];
                         StartGame();
                     }
-
                     break;
 
                 case 2:
                     if (CurrentArea.areaName == "Village")
                     {
-                        CurrentArea = dictArea["Pickpocket"];
+                        CurrentArea = dictArea["Inquiry"];
                         StartGame();
                     }
-                    else if (CurrentArea.areaName == "Pickpocket")
+                    break;
+
+                case 3:
+                    if (CurrentArea.areaName == "Inquiry")
                     {
-                        CurrentArea = dictArea["Village"];
-                        StartGame();
-                    }
-                    else if (CurrentArea.areaName == "Inquiry")
-                    {
-                        CurrentArea = dictArea["Village"]; // Go back to Village scenario
-                        StartGame();
+                        
                     }
                     break;
             }
