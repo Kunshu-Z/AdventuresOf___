@@ -73,6 +73,15 @@ namespace AdventuresOf___
                 "Go to Guild",
                 "Attack the man"));
 
+            dictArea.Add("Attack The Man", new Area("Attack The Man",
+                "Village Road",
+                $"{Program.playerName} runs up behind the bulky figure, each step taken only lowering their self esteem...\n" +
+                $"Suddenly, the bulky man stops and so do you...\n" +
+                $"It's clear that this man was threatening you, or perhaps warning you...\n" +
+                $"...\nYou slowly back away and turn around into the Saber guild",
+                "Continue",
+                "--|--"));
+
             dictArea.Add("Saber Guild", new Area("Saber Guild",
                 "Saber Guild Building",
                 $"{Program.playerName}: No point in fighting that guy, I've got things to do, starting with my current area.\n" +
@@ -735,7 +744,7 @@ namespace AdventuresOf___
                 "...",
                 $"The skeletal figure then plunges his hand into your chest, implanting something that causes your body to change rapidly.\n" +
                 $"{Program.playerName}'s body grew to large proportions, their limbs changing into various animal parts - claws and the like.\n" +
-                $"{Program.playerName} tried to scream but all that came out was..." +
+                $"{Program.playerName} tried to scream but all that came out was...\n" +
                 $"A roar",
                 "Continue",
                 "--|--"));
@@ -801,6 +810,11 @@ namespace AdventuresOf___
                         StartGame();
                     }
                     else if (CurrentArea.areaName == "Road to Saber Guild")
+                    {
+                        CurrentArea = dictArea["Saber Guild"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Attack The Man")
                     {
                         CurrentArea = dictArea["Saber Guild"];
                         StartGame();
@@ -1005,12 +1019,97 @@ namespace AdventuresOf___
                         CurrentArea = dictArea["Awakening"];
                         StartGame();
                     }
+                    else if (CurrentArea.areaName == "Weapon Selection (SoF)")
+                    {
+                        CurrentArea = dictArea["Weapon: Saber (SoF)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Weapon: Saber (SoF)")
+                    {
+                        CurrentArea = dictArea["Hour One (SoF - Saber)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Hour One (SoF - Saber)")
+                    {
+                        CurrentArea = dictArea["Hour Two (SoF - Saber)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Hour Two (SoF - Saber)")
+                    {
+                        CurrentArea = dictArea["Hour Three (SoF - Saber)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Hour Three (SoF - Saber)")
+                    {
+                        CurrentArea = dictArea["Hour Three & a Half (SoF - Saber)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Weapon: Bow (SoF)")
+                    {
+                        CurrentArea = dictArea["Hour One (SoF - Bow)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Hour One (SoF - Bow)")
+                    {
+                        CurrentArea = dictArea["Hour Two (SoF - Bow)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Hour Two (SoF - Bow)")
+                    {
+                        CurrentArea = dictArea["Hour Three (SoF - Bow)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Hour Three (SoF - Bow)")
+                    {
+                        CurrentArea = dictArea["Hour Three & a Half (SoF - Bow)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Hour Three & a Half (SoF - Saber)")
+                    {
+                        CurrentArea = dictArea["Encounter (SoF)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Hour Three & a Half (SoF - Bow)")
+                    {
+                        CurrentArea = dictArea["Encounter (SoF)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Encounter (SoF)")
+                    {
+                        CurrentArea = dictArea["Battle Against The P (SoF)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Battle Against The P (SoF)")
+                    {
+                        CurrentArea = dictArea["Retreat (SoF)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Retreat (SoF)")
+                    {
+                        CurrentArea = dictArea["Mysterious Figure (SoF)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Mysterious Figure (SoF)")
+                    {
+                        CurrentArea = dictArea["Corruption (SoF)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Corruption (SoF)")
+                    {
+                        CurrentArea = dictArea["Awakening (SoF)"];
+                        StartGame();
+                    }
                     break;
 
                 case 2:
                     if (CurrentArea.areaName == "Village")
                     {
                         CurrentArea = dictArea["Pickpocket"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Road to Saber Guild")
+                    {
+                        CurrentArea = dictArea["Attack The Man"];
                         StartGame();
                     }
                     else if (CurrentArea.areaName == "Weapon Selection")
@@ -1126,6 +1225,51 @@ namespace AdventuresOf___
                     else if (CurrentArea.areaName == "Return to Village")
                     {
                         CurrentArea = dictArea["Push Arrow"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Map Selection")
+                    {
+                        CurrentArea = dictArea["Weapon Selection (SoF)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Weapon Selection (SoF)")
+                    {
+                        CurrentArea = dictArea["Weapon: Bow (SoF)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Hour Three & a Half (SoF - Saber)")
+                    {
+                        CurrentArea = dictArea["Encounter (SoF)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Hour Three & a Half (SoF - Bow)")
+                    {
+                        CurrentArea = dictArea["Encounter (SoF)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Battle Against The P (SoF)")
+                    {
+                        CurrentArea = dictArea["Retreat (SoF)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Hour Three & a Half (SoF - Saber)")
+                    {
+                        CurrentArea = dictArea["Encounter (SoF)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Hour Three & a Half (SoF - Bow)")
+                    {
+                        CurrentArea = dictArea["Encounter (SoF)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Battle Against The P (SoF)")
+                    {
+                        CurrentArea = dictArea["Retreat (SoF)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Mysterious Figure (SoF)")
+                    {
+                        CurrentArea = dictArea["Corruption (SoF)"];
                         StartGame();
                     }
                     break;
