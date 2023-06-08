@@ -46,7 +46,7 @@ namespace AdventuresOf___
             dictArea.Add("Starting", new Area("Starting",
                 "Village Hut",
                 $"...\n...\n*Inaudible noise*\n{Program.playerName}: Ugh, what happened?\nWhere am I?\n*Stands up*\nI gotta ask someone what this place is" +
-                $"Last time I remember, I was out in the fields before a beast appeared out of the ground\n...\nWhy are some people giving me a strange glance...\n" +
+                $"\nLast time I remember, I was out in the fields before a beast appeared out of the ground\n...\nWhy are some people giving me a strange glance...\n" +
                 $"I gotta ask someone about this place\n*Approaches person*",
                 "Continue",
                 "--|--"));
