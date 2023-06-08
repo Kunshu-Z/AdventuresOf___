@@ -92,7 +92,7 @@ namespace AdventuresOf___
             dictArea.Add("Weapon Selection", new Area("Weapon Selection",
                 "Saber Guild",
                 $"{Program.playerName} chooses to go to the Old Saber Battlefield, a remnant of a more chaotic age for the Sabers" +
-                $"who attacked each other in a bloody civil war, {Program.playerName} realizes the dangers and needs a weapon.\n" +
+                $" who attacked each other in a bloody civil war, {Program.playerName} realizes the dangers and needs a weapon.\n" +
                 $"{Program.playerName}: Excuse me miss receptionist, I might not be a member of the guild but do you have any weapons I could use for my journey?\n" +
                 $"Receptionist: Certainly, we have 2 lost weapons in our posession, they weren't claimed by their owners so you may have one.\n" +
                 $"She points to a slightly rusted sword (a saber to be exact) and an unremarkable bow and a quiver of 20 arrows.",
@@ -573,32 +573,176 @@ namespace AdventuresOf___
                 "Continue",
                 "--|--"));
 
-            dictArea.Add("Awakening", new Area("Awakening",
+            dictArea.Add("Mysterious Figure", new Area("Mysterious Figure",
                 "...",
                 $"...\nThe Voice: Coward\n{Program.playerName} hazily asks: Who... said that?\n" +
                 $"The voice then comes from behind.\nThe voice: COWARD!\n" +
                 $"{Program.playerName}: Is this because I ran? What else was I meant to do? That beast was huge!\n" +
                 $"Suddenly the voice sounded calm\nThe voice: That beast, was my beast...\n" +
-                $"{Program.playerName}: That beast tried to kill me, so it was self defence!" +
+                $"{Program.playerName}: That beast tried to kill me, so it was self defence!\n" +
                 $"The voice: What was taken, must be compensated...\n" +
-                $"Suddenly a menacing skeletal figure appears right in front of {Program.playerName}\n" +
+                $"Suddenly a menacing skeletal figure appears right in front of {Program.playerName}...",
+                "Continue",
+                "--|--"));
+
+            dictArea.Add("Awakening", new Area("Awakening",
+                "...",
                 $"The voice: I need a new beast...\nThe voice: This world is full of cowards, but none as much as you.\n" +
-                $"The skeletal figure then plunges his hand into your chest, implanting something that causes your body to change rapidly." +
-                $"{Program.playerName}'s body grew to large proportions, their limbs changing into various animal parts - claws and the like." +
-                $"{Program.playerName} tried to scream but all that came out was..." +
+                $"The skeletal figure then plunges his hand into your chest, implanting something that causes your body to change rapidly.\n" +
+                $"{Program.playerName}'s body grew to large proportions, their limbs changing into various animal parts - claws and the like.\n" +
+                $"{Program.playerName} tried to scream but all that came out was...\n" +
                 $"A roar...",
+                "Continue",
+                "--|--"));
+
+            dictArea.Add("Weapon Selection (SoF)", new Area("Weapon Selection (SoF)",
+                "Saber Guild",
+                $"{Program.playerName} chooses to go to the Sea of Wheat, no description was provided in the map legend for this place so it's shrouded in mystery,\n" +
+                $"{Program.playerName} doesn't really see any danger in this place but needs a weapon just in case.\n" +
+                $"{Program.playerName}: Excuse me miss receptionist, I might not be a member of the guild but do you have any weapons I could use for my journey?\n" +
+                $"Receptionist: Certainly, we have 2 lost weapons in our posession, they weren't claimed by their owners so you may have one.\n" +
+                $"She points to a slightly rusted sword (a saber to be exact) and an unremarkable bow and a quiver of 20 arrows.",
+                "Choose the Sword",
+                "Choose the Bow"));
+
+            dictArea.Add("Weapon: Saber (SoF)", new Area("Weapon: Saber (SoF)",
+                "Road to Sea of Wheat",
+                $"{Program.playerName} picks up the sword, takes a minimap, thanks the receptionist, and goes on their merry way to the Sea of Wheat due east from the village.",
+                "Continue",
+                "--|--"));
+
+            dictArea.Add("Hour One (SoF - Saber)", new Area("Hour One (SoF - Saber)",
+                "Road to Sea of Wheat",
+                "Hour One\nOn the road you pass an old manor, abandoned and desolate.",
+                "Continue",
+                "--|--"));
+
+            dictArea.Add("Hour Two (SoF - Saber)", new Area("Hour Two (SoF - Saber)",
+                "Road to Sea of Wheat",
+                "Hour Two\nYou get tired and rest beside a tree trunk, the sun shines still in the early afternoon.",
+                "Continue",
+                "--|--"));
+
+            dictArea.Add("Hour Three (SoF - Saber)", new Area("Hour Three (SoF - Saber)",
+                "Road to Sea of Wheat",
+                "Hour Three\nYou get back up and continue, you come across an abandoned wooden ale keg, only some putrid smelling water inside",
+                "Continue",
+                "--|--"));
+
+            dictArea.Add("Hour Three & a Half (SoF - Saber)", new Area("Hour Three & a Half (SoF - Saber)",
+                "Sea of Wheat",
+                "Hour Three & a Half\nYou come to what seems to be a literal Sea of Wheat.\n" +
+                "It's a quiet place with only wheat as far as the eye can see...\n" +
+                "(Is this really just a farm?)\n...\n" +
+                "Suddenly you surge with anger." +
+                $"{Program.playerName}: Three and a half hours for a farm? Really!?" +
+                $"{Program.playerName} needs to let that anger loose, but how?",
+                "Slash at the wheat",
+                "Tear the wheat from their roots"));
+
+            dictArea.Add("Weapon: Bow (SoF)", new Area("Weapon: Bow (SoF)",
+                "Road to Sea of Wheat",
+                $"{Program.playerName} picks up the bow and arrows, takes a minimap, thanks the receptionist, and goes on their merry way to the Sea of Wheat due east from the village.",
+                "Continue",
+                "--|--"));
+
+            dictArea.Add("Hour One (SoF - Bow)", new Area("Hour One (SoF - Bow)",
+                "Road to Sea of Wheat",
+                "Hour One\nOn the road you pass an old manor, abandoned and desolate.",
+                "Continue",
+                "--|--"));
+
+            dictArea.Add("Hour Two (SoF - Bow)", new Area("Hour Two (SoF - Bow)",
+                "Road to Sea of Wheat",
+                "Hour Two\nYou get tired and rest beside a tree trunk, the sun shines still in the early afternoon.",
+                "Continue",
+                "--|--"));
+
+            dictArea.Add("Hour Three (SoF - Bow)", new Area("Hour Three (SoF - Bow)",
+                "Road to Sea of Wheat",
+                "Hour Three\nYou get back up and continue, you come across an abandoned wooden ale keg, only some putrid smelling water inside",
+                "Continue",
+                "--|--"));
+
+            dictArea.Add("Hour Three & a Half (SoF - Bow)", new Area("Hour Three & a Half (SoF - Bow)",
+                "Sea of Wheat",
+                "Hour Three & a Half\nYou come to what seems to be a literal Sea of Wheat.\n" +
+                "It's a quiet place with only wheat as far as the eye can see...\n" +
+                "(Is this really just a farm?)\n...\n" +
+                "Suddenly you surge with anger." +
+                $"{Program.playerName}: Three and a half hours for a farm? Really!?" +
+                $"{Program.playerName} needs to let that anger loose, but how?",
+                "Shoot arrows at literally nothing",
+                "Tear the wheat from their roots"));
+
+            dictArea.Add("Encounter (SoF)", new Area("Encounter (SoF)",
+                "Sea of Wheat",
+                $"After at least an hour of rampaging through the Sea of Wheat, suddenly all the golden wheat turns white, a burning white, and then.\n" +
+                $"HEY! COME HERE\nA tall figure starts moving towards you in the Sea of White\n" +
+                $"The heat intensifies as he gets closer\n" +
+                $"{Program.playerName}: Wh- who are you!?" +
+                $"The figure: Me? They call me many names - The Piercer, The Puncturer, The Poker - no one has ever known my true name, and neither will you, I've given up that life." +
+                $"The P: Tresspasser, why are you destroying my crops? I've been living here for so long, are you not afraid?\nTo meet the man I once was?\n" +
+                $"{Program.playerName}: I don't even know who you are.\n" +
+                $"The P: Then maybe I should give you a taste of my power!",
+                "Continue",
+                "--|--"));
+
+            dictArea.Add("Battle Against The P (SoF)", new Area("Battle Against The P (SoF)",
+                "Sea of Wheat",
+                $"{Program.playerName}: With what? You have no weapons! You're wearing nothing but a loincloth!\n" +
+                $"Suddenly, The P lunges towards you and penetrates your arm with an unseen weapon.\n" +
+                $"The P: Leave. Now.\n" +
+                $"{Program.playerName}'s arm is literally burning! There is no other option, you must leave.",
+                "Leave",
+                "Now"));
+
+            dictArea.Add("Retreat (SoF)", new Area("Retreat (SoF)",
+                "Road to Sea of Wheat",
+                $"There's no way you'd ever be able to beat someone like him.\n" +
+                $"You keep on walking in the direction you came from, your arm still in pain from a burning sensation.\n" +
+                $"Slowly, the forest became darker... Whispers from the woods came from either side, echoing in your mind.\n" +
+                $"Darker and darker thoughts pop into {Program.playerName}'s mind...\n" +
+                $"{Program.playerName} felt useless, they couldn't find the beast, they couldn't beat the man in the Sea of Wheat.\n" +
+                $"They couldn't even muster up the courage to fight that man outside the Saber Guild...\n" +
+                $"They wanted to destroy everything... So that they'll be on top.",
+                "Continue",
+                "--|--"));
+
+            dictArea.Add("Mysterious Figure (SoF)", new Area("Mysterious Figure (SoF)",
+                "Near Saber Village",
+                $"{Program.playerName} was nearing the village gate until they notice a black tar slowly bubbling up from the ground...\n" +
+                $"A skeletal figure appears from the tar, holding a scythe of some sort...\n" +
+                $"{Program.playerName}, taken aback from this is completely speechless.\n" +
+                $"The figure emanates a dark aura that makes the whispers intensify, they're no longer whispers... They're screams...\n" +
+                $"They want you to join the figure\nThey promise power.",
+                "Join the skeletal figure",
+                "Refuse the figure"));
+
+            dictArea.Add("Corruption (SoF)", new Area("Corruption (SoF)",
+                "...",
+                $"There is no refusing power...\nYou want this power...\n" +
+                $"To defeat your enemies\nTo go even further beyond mortal comprehension...\n" +
+                $"...\n" +
+                $"The Figure: Hmm... before I give you this power... What do you intend to do with it?\n" +
+                $"{Program.playerName}: This place... This land is cruel... I want to... Destroy it all and make it a better place...\n" +
+                $"The Figure: Ahh... Very well then... You'll... Be able to destroy at the very least.\n" +
+                $"{Program.playerName}: Wait wha-?",
+                "Continue",
+                "--|--"));
+
+            dictArea.Add("Awakening (SoF)", new Area("Awakening (SoF)",
+                "...",
+                $"The skeletal figure then plunges his hand into your chest, implanting something that causes your body to change rapidly.\n" +
+                $"{Program.playerName}'s body grew to large proportions, their limbs changing into various animal parts - claws and the like.\n" +
+                $"{Program.playerName} tried to scream but all that came out was..." +
+                $"A roar",
                 "Continue",
                 "--|--"));
 
             dictArea.Add("Pickpocket", new Area("Pickpocket",
                 "Village Mart",
                 $"Stranger: Hey! What are you doing?! GET BACK HERE!\n*After reaching a safe space within the village...*\n{Program.playerName}: Right, looks like I'm away from him",
-                "Inquire about the place",
-                "Pickpocket"));
-
-            dictArea.Add("Test", new Area("Test",
-                "Village Mart",
-                "Stranger2: Oh, hello! What can I help you with?",
                 "Inquire about the place",
                 "Pickpocket"));
         }
@@ -848,10 +992,15 @@ namespace AdventuresOf___
                     }
                     else if (CurrentArea.areaName == "Twist Arrow")
                     {
-                        CurrentArea = dictArea["Awakening"];
+                        CurrentArea = dictArea["Mysterious Figure"];
                         StartGame();
                     }
                     else if (CurrentArea.areaName == "Push Arrow")
+                    {
+                        CurrentArea = dictArea["Mysterious Figure"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Mysterious Figure")
                     {
                         CurrentArea = dictArea["Awakening"];
                         StartGame();
