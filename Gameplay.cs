@@ -751,9 +751,16 @@ namespace AdventuresOf___
 
             dictArea.Add("Pickpocket", new Area("Pickpocket",
                 "Village Mart",
-                $"Stranger: Hey! What are you doing?! GET BACK HERE!\n*After reaching a safe space within the village...*\n{Program.playerName}: Right, looks like I'm away from him",
-                "Inquire about the place",
-                "Pickpocket"));
+                $"Stranger: Hey! What are you doing?! GET BACK HERE!\n*After reaching a safe space within the village...*\n{Program.playerName}: Right, looks like I'm away from him\n" +
+                $"Now that I have some money, I guess I should get some food.\nI'm starving..." +
+                $"*Enters Restaurant...*" +
+                $"Waiter: Welcome to the Dragon's Den! What would you like to have today?" +
+                $"{Program.playerName}: Just give me the cheapest meal you have." +
+                $"Waiter: Right, that's one Dragon style BLT. It will be ready shortly." +
+                $"*After having the food*" +
+                $"Waiter: Right, your total comes to 500G.",
+                "Pay the bill",
+                "Dine n' Dash!"));
         }
 
         //Method to start the game at the starting point
@@ -1105,6 +1112,12 @@ namespace AdventuresOf___
                     if (CurrentArea.areaName == "Village")
                     {
                         CurrentArea = dictArea["Pickpocket"];
+                        StartGame();
+                    }
+
+                    else if (CurrentArea.areaName == "Pickpocket")
+                    {
+
                         StartGame();
                     }
                     else if (CurrentArea.areaName == "Road to Saber Guild")
