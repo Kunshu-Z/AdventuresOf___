@@ -99,6 +99,12 @@ namespace AdventuresOf___
                 "Choose the Sword",
                 "Choose the Bow"));
 
+            dictArea.Add("Weapon: Saber", new Area("Weapon: Saber",
+                "Road to Saber BattleField",
+                $"{Program.playerName} picks up the sword, takes a minimap, thanks the receptionist, and goes on their merry way to the Old Battlefield due west from the village.",
+                "Continue",
+                "--|--"));
+
             dictArea.Add("Hour One (Saber)", new Area("Hour One (Saber)",
                 "Road to Saber BattleField",
                 "Hour One\nOn the road you pass a traveler who says not a single word, just a stare - a glare even - into your eyes, then keeps walking on.",
@@ -313,7 +319,200 @@ namespace AdventuresOf___
                 "Continue",
                 "--|--"));
 
-            dictArea.Add("Run Away (Saber)", new Area("Run Away (Saber)",
+            //BOW SECTION
+            dictArea.Add("Weapon: Bow", new Area("Weapon: Bow",
+                "Road to Saber BattleField",
+                $"{Program.playerName} picks up the bow and arrows, takes a minimap, thanks the receptionist, and goes on their merry way to the Old Battlefield due west from the village.",
+                "Continue",
+                "--|--"));
+
+            dictArea.Add("Hour One (Bow)", new Area("Hour One (Bow)",
+                "Road to Saber BattleField",
+                "Hour One\nOn the road you pass a traveler who says not a single word, just a stare - a glare even - into your eyes, then keeps walking on.",
+                "Continue",
+                "--|--"));
+
+            dictArea.Add("Hour Two (Bow)", new Area("Hour Two (Bow)",
+                "Road to Saber BattleField",
+                "Hour Two\nYou get tired and rest beside a tree trunk, a few deer graze on some grass a few trees down.",
+                "Continue",
+                "--|--"));
+
+            dictArea.Add("Hour Three (Bow)", new Area("Hour Three (Bow)",
+                "Road to Saber BattleField",
+                "Hour Three\nYou get back up and continue, you come across an abandoned wooden barrel, nothing was inside.",
+                "Continue",
+                "--|--"));
+
+            dictArea.Add("Hour Three & a Half (Bow)", new Area("Hour Three & a Half (Bow)",
+                "Saber BattleField",
+                $"Hour Three & a Half\nYou come to a clearing, two old swords thrust in the ground long ago after the battles here, to mark the battleground.\n" +
+                $"It's a quiet place with little vegetation, almost only dirt with old weapons lain about. Grim.\n" +
+                $"(Maybe this is where that beast is, I never really got a good look at it)\nYou start searching around for anything, anything at all.\n" +
+                $"... nothing\n... nothing\n...something?...nothing",
+                "Continue",
+                "--|--"));
+
+            dictArea.Add("Encounter (Bow)", new Area("Encounter (Bow)",
+                "Saber BattleField",
+                $"{Program.playerName}: There's nothing here! Just rusty old swords and shields.\n" +
+                $"You pick a shield to inspect it, holding it up to your face you suddenly feel a large thud on the face of the shield.\n" +
+                $"A sharp needle pierced the shield, bewildered, you look up and see a huge beast a tail with needles at the end, \na face like a lizard, almost draconic, " +
+                $"a body like a horse, with plates of armor, it's legs were like a huge cat with talons like an eagle." +
+                $"Don't just stand there! Do something!",
+                "Fight the Beast",
+                "Run away in fear"));
+
+            dictArea.Add("Fight (Bow)", new Area("Fight (Bow)",
+                "Saber BattleField",
+                $"Foolish choice, but it was your choice, this is your story after all.\n{Program.playerName} drops the shield, takes out their bow, and readies and arrow." +
+                $"The beast charges into {Program.playerName}, making them fall over\nThe beast fires a needle from it's tail, it misses.\n" +
+                $"It tries again, it won't miss this time.",
+                "Pull up the shield",
+                "Panic and Roll"));
+
+            dictArea.Add("Shield (Bow)", new Area("Shield (Bow)",
+                "Saber BattleField",
+                $"...\nWhat shield?\n{Program.playerName}: Crap\n" +
+                $"A fired needle gets stuck in your leg, it's very painful\n" +
+                $"The beast then rears onto its hind legs and prepares to slash at you with its bird-like claws.\n" +
+                $"Time slows, perhaps due to simply being in the moment, you should probably attack...",
+                "Quickly fire an arrow into its exposed neck",
+                "Get up and and push into it while its unstable"));
+
+            dictArea.Add("Roll (Bow)", new Area("Roll (Bow)",
+                "Saber BattleField",
+                "You roll into the attack, almost like you phase through the needle. You now stand closer to the beast\n" +
+                "The left of the beast's face is nearing you, something must be done.",
+                "Fire an arrow into the beast's eye",
+                "Jump and kick the beast's face then fire an arrow into its eye"));
+
+            dictArea.Add("Push Beast (Bow - Shield)", new Area("Push Beast (Bow - Shield)",
+                "Saber BattleField",
+                $"{Program.playerName} rushes to the beast's belly and pushes into it with all their might!\n" +
+                $"The beast slowly falls onto its back and the armor on its back digs into the beast's skin.\n" +
+                $"Suddenly a needle fires from the beast's tail.\n" +
+                $"{Program.playerName} catches it!? Some wicked reflexes were suddenly instilled within our hero.\n" +
+                $"So now there's a needle in your hand, what to do I wonder?",
+                "Run up to the beast's left eye and stab it",
+                "Stab the beast's left eye while the narrator ridicules it"));
+
+            dictArea.Add("Stab Eye (Bow - Shield)", new Area("Stab Eye (Bow - Shield)",
+                "Saber BattleField",
+                $"You run up to the beast's left eye and stab it deep, nearly to the brain" +
+                "The beast roars then makes no more movement\n" +
+                "And then...\nThe beast stands up again!\n" +
+                "Suddenly the beasts's armor breaks off, revealing splendid black wings.\n" +
+                "The beast flies up with the needle still in its left and back down to charge into you!\n" +
+                "You must grab onto the beast, but which side?",
+                "Left side",
+                "LEFT SIDE"));
+
+            dictArea.Add("Stab Eye w/Narrator (Bow - Shield)", new Area("Stab Eye w/Narrator (Bow - Shield)",
+                "Saber BattleField",
+                $"You run up to the beast's left eye and stab it deep indeed, nearly to the brain" +
+                "The beast roars then makes no more movement, what an embarrassment\n" +
+                "And then...\nThe beast stands up again instead of taking the L!\n" +
+                "Suddenly the beasts's shoddy armor breaks off, revealing off brand black wings.\n" +
+                "The beast flies up with the needle still in its left eye and back down to charge into you (which it won't)!\n" +
+                "You must grab onto the beast, but which side? (I'd suggest going Left)",
+                "Left side",
+                "LEFT SIDE"));
+
+            dictArea.Add("Fire Arrow (Bow - Shield)", new Area("Fire Arrow (Bow - Shield)",
+                "Saber BattleField",
+                $"Though {Program.playerName}'s leg was pierced, their arms are still strong, they ready the bow and an arrow.\n" +
+                "The arrow is loosed and it pierces the beast's neck, it falls onto its back in pain and you run near its face to stab an arrow into its eye." +
+                "The eye is thick but it works, the arrow stabbed through, but you let go!.\n" +
+                "The beast roars then makes no more movement\n" +
+                "And then...\nThe beast stands up again!\n" +
+                "Suddenly the beasts's armor breaks off, revealing splendid black wings.\n" +
+                "The beast flies up with the arrow still in its left and back down to charge into you!\n" +
+                "You must grab onto the beast, but which side?",
+                "Left side",
+                "LEFT SIDE"));
+
+            dictArea.Add("Fire Arrow (Bow - Roll)", new Area("Fire Arrow (Bow - Roll)",
+                "Saber BattleField",
+                $"You draw the arrow and fire -\n" +
+                "It missed the mark... (you were at point blank by the way)\n" +
+                "Frustrated you grab an arrow from your quiver and stab at the beast like a madman.\n" +
+                "The arrow in your hand suddenly disappeared...\nInto the beast's left eye!" +
+                "And then...\nThe beast stands up again!\n" +
+                "Suddenly the beasts's armor breaks off, revealing splendid black wings.\n" +
+                "The beast flies up with the arrow still in its left and back down to charge into you!\n" +
+                "You must grab onto the beast, but which side?",
+                "Left side",
+                "LEFT SIDE"));
+
+            dictArea.Add("Jump Kick (Bow - Roll)", new Area("Jump Kick (Bow - Roll)",
+                "Saber BattleField",
+                $"You messed up your order of operations...\n" +
+                "You were meant to kick off the beast's face, then fire the arrow in the air looking all cool...\n" +
+                "Instead you shot the arrow first into the beast's eye and pushed the arrow deeper by kicking it in.\n" +
+                "the change in expected surface area you were meant to kick off of made you slip into the air." +
+                "The beast by the way fell over from the pain.\n" +
+                $"For a moment {Program.playerName} believed the beast to be dead." +
+                "And then...\nThe beast stands up again!\n" +
+                "Suddenly the beasts's armor breaks off, revealing splendid black wings.\n" +
+                "The beast flies up with the arrow still in its left and back down to charge into you!\n" +
+                "You must grab onto the beast, but which side?",
+                "Left side",
+                "LEFT SIDE"));
+
+            dictArea.Add("Left Side (Bow - Roll, Jump Kick)", new Area("Left Side (Bow - Rolll, Jump Kick)",
+                "Saber BattleField",
+                $"{Program.playerName} dodges to their right and grab on its left where the arrow in its eye was stuck\n" +
+                $"The beast flies east of the battlefield. Back to the village! You realize this beast must be killed now.\n" +
+                $"You push the arrow even more while struggling to hold on, the beast falls a little but still has some strength to fly.\n" +
+                $"For a split second\nYou and the beast starts falling into the market place, it roars and then...\n" +
+                $"THUD!!!\nStalls are squashed under the beast and needles fly into the sky in a final reflex from its tail; everyone in the village ducks for cover.\n" +
+                $"The beast is dead, yet {Program.playerName} lives\n" +
+                $"A sinister bony cackle is heard faintly, is this another villain?\n" +
+                $"{Program.playerName} didn't care, right now they were a hero.",
+                "Continue",
+                "--|--"));
+
+            dictArea.Add("Left Side (Bow - Roll, Arrow)", new Area("Left Side (Bow - Rolll, Arrow)",
+                "Saber BattleField",
+                $"{Program.playerName} dodges to their right and grab on its left where the arrow in its eye was stuck\n" +
+                $"The beast flies east of the battlefield. Back to the village! You realize this beast must be killed now.\n" +
+                $"You push the arrow even more while struggling to hold on, the beast falls a little but still has some strength to fly.\n" +
+                $"For a split second\nYou and the beast starts falling into the market place, it roars and then...\n" +
+                $"THUD!!!\nStalls are squashed under the beast and needles fly into the sky in a final reflex from its tail; everyone in the village ducks for cover.\n" +
+                $"The beast is dead, yet {Program.playerName} lives\n" +
+                $"A sinister bony cackle is heard faintly, is this another villain?\n" +
+                $"{Program.playerName} didn't care, right now they were a hero.",
+                "Continue",
+                "--|--"));
+
+            dictArea.Add("Left Side (Bow - Shield, Push)", new Area("Left Side (Bow - Shield, Push)",
+                "Saber BattleField",
+                $"{Program.playerName} dodges to their right and grab on its left where the needle in its eye was stuck\n" +
+                $"The beast flies east of the battlefield. Back to the village! You realize this beast must be killed now.\n" +
+                $"You push the needle even more while struggling to hold on, the beast falls a little but still has some strength to fly.\n" +
+                $"For a split second\nYou and the beast starts falling into the market place, it roars and then...\n" +
+                $"THUD!!!\nStalls are squashed under the beast and needles fly into the sky in a final reflex from its tail; everyone in the village ducks for cover.\n" +
+                $"The beast is dead, yet {Program.playerName} lives\n" +
+                $"A sinister bony cackle is heard faintly, is this another villain?\n" +
+                $"{Program.playerName} didn't care, right now they were a hero.",
+                "Continue",
+                "--|--"));
+
+            dictArea.Add("Left Side (Bow - Shield, Arrow)", new Area("Left Side (Bow - Shield, Arrow)",
+                "Saber BattleField",
+                $"{Program.playerName} dodges to their right and grab on its left where the arrow in its eye was stuck\n" +
+                $"The beast flies east of the battlefield. Back to the village! You realize this beast must be killed now.\n" +
+                $"You push the arrow even more while struggling to hold on, the beast falls a little but still has some strength to fly.\n" +
+                $"For a split second\nYou and the beast starts falling into the market place, it roars and then...\n" +
+                $"THUD!!!\nStalls are squashed under the beast and needles fly into the sky in a final reflex from its tail; everyone in the village ducks for cover.\n" +
+                $"The beast is dead, yet {Program.playerName} lives\n" +
+                $"A sinister bony cackle is heard faintly, is this another villain?\n" +
+                $"{Program.playerName} didn't care, right now they were a hero.",
+                "Continue",
+                "--|--"));
+
+            dictArea.Add("Run Away", new Area("Run Away",
                 "Road to Saber BattleField",
                 $"The absolutely terrified {Program.playerName} starts running away from the battle field, back the way they came.\n" +
                 $"You run a short distance but then the beast gives chase.\n" +
@@ -323,7 +522,7 @@ namespace AdventuresOf___
                 "Lie flat on the ground",
                 "Keep running in a straight line"));
 
-            dictArea.Add("Lie Flat (Saber)", new Area("Lie Flat (Saber)",
+            dictArea.Add("Lie Flat", new Area("Lie Flat",
                 "Road to Saber BattleField",
                 "You lie flat on the ground and wait for the flying beast to pass over you..." +
                 $"It did not.\nIt picks {Program.playerName} up by its talons like a gull catches its fish\n" +
@@ -331,22 +530,22 @@ namespace AdventuresOf___
                 "Wait",
                 "--|--"));
 
-            dictArea.Add("Run Straight (Saber)", new Area("Run Straight (Saber)",
+            dictArea.Add("Run Straight", new Area("Run Straight",
                 "Road to Saber BattleField",
                 "You keep running, hoping that you could just keep on till you find some better cover." +
                 $"You did not.\nIt picks {Program.playerName} up by its talons like a gull catches its fish\n" +
                 $"You're binded and can't move any of your limbs while in the beast's grasp so you can only do one thing.",
-                "--|--",
-                "Wait"));
+                "Wait",
+                "--|--"));
 
-            dictArea.Add("Wait (Saber)", new Area("Wait (Saber)",
+            dictArea.Add("Wait", new Area("Wait",
                 "Road to Saber BattleField",
                 $"Your fate being determined by how much an almagamation of a beast is holding you is quite embarrassing.\n" +
                 $"The beast nears the village at speeds way faster than you walked, it took only 5 minutes compared to your three and a half hours.",
                 "Continue",
                 "--|--"));
 
-            dictArea.Add("Return to Village (Saber)", new Area("Return to Village (Saber)",
+            dictArea.Add("Return to Village", new Area("Return to Village",
                 "Saber Village",
                 $"The beast now hovers over the village, villagers terrified and saber guards emerging from their posts.\n" +
                 $"{Program.playerName}: HEY! GUARDS! HELP!\n" +
@@ -356,7 +555,7 @@ namespace AdventuresOf___
                 "Twist the arrow out",
                 "Push the arrow in deeper"));
 
-            dictArea.Add("Twist Arrow (Saber)", new Area("Twist Arrow (Saber)",
+            dictArea.Add("Twist Arrow", new Area("Twist Arrow",
                 "Saber Village",
                 $"You twist the arrow and yank the arrow out from the beast.\n" +
                 $"Then, in desparation to reach solid ground you repeatedly stab the beast to the point it has little strength to stay afloat.\n" +
@@ -365,7 +564,7 @@ namespace AdventuresOf___
                 "Continue",
                 "--|--"));
 
-            dictArea.Add("Push Arrow (Saber)", new Area("Push Arrow (Saber)",
+            dictArea.Add("Push Arrow", new Area("Push Arrow",
                 "Saber Village",
                 $"You push the arrow deeper into the beast.\n" +
                 $"The beast - weakened - had little strength to stay afloat.\n" +
@@ -374,7 +573,7 @@ namespace AdventuresOf___
                 "Continue",
                 "--|--"));
 
-            dictArea.Add("Awakening (Saber)", new Area("Awakening (Saber)",
+            dictArea.Add("Awakening", new Area("Awakening",
                 "...",
                 $"...\nThe Voice: Coward\n{Program.playerName} hazily asks: Who... said that?\n" +
                 $"The voice then comes from behind.\nThe voice: COWARD!\n" +
@@ -474,6 +673,11 @@ namespace AdventuresOf___
                     }
                     else if (CurrentArea.areaName == "Weapon Selection")
                     {
+                        CurrentArea = dictArea["Weapon: Saber"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Weapon: Saber")
+                    {
                         CurrentArea = dictArea["Hour One (Saber)"];
                         StartGame();
                     }
@@ -542,34 +746,114 @@ namespace AdventuresOf___
                         CurrentArea = dictArea["Left Side (Saber - Sword, Stab)"];
                         StartGame();
                     }
-                    else if (CurrentArea.areaName == "Run Away (Saber)")
+                    else if (CurrentArea.areaName == "Weapon: Bow")
                     {
-                        CurrentArea = dictArea["Lie Flat (Saber)"];
+                        CurrentArea = dictArea["Hour One (Bow)"];
                         StartGame();
                     }
-                    else if (CurrentArea.areaName == "Lie Flat (Saber)")
+                    else if (CurrentArea.areaName == "Hour One (Bow)")
                     {
-                        CurrentArea = dictArea["Wait (Saber)"];
+                        CurrentArea = dictArea["Hour Two (Bow)"];
                         StartGame();
                     }
-                    else if (CurrentArea.areaName == "Wait (Saber)")
+                    else if (CurrentArea.areaName == "Hour Two (Bow)")
                     {
-                        CurrentArea = dictArea["Return to Village (Saber)"];
+                        CurrentArea = dictArea["Hour Three (Bow)"];
                         StartGame();
                     }
-                    else if (CurrentArea.areaName == "Return to Village (Saber)")
+                    else if (CurrentArea.areaName == "Hour Three (Bow)")
                     {
-                        CurrentArea = dictArea["Twist Arrow (Saber)"];
+                        CurrentArea = dictArea["Hour Three & a Half (Bow)"];
                         StartGame();
                     }
-                    else if (CurrentArea.areaName == "Twist Arrow (Saber)")
+                    else if (CurrentArea.areaName == "Hour Three & a Half (Bow)")
                     {
-                        CurrentArea = dictArea["Awakening (Saber)"];
+                        CurrentArea = dictArea["Encounter (Bow)"];
                         StartGame();
                     }
-                    else if (CurrentArea.areaName == "Push Arrow (Saber)")
+                    else if (CurrentArea.areaName == "Encounter (Bow)")
                     {
-                        CurrentArea = dictArea["Awakening (Saber)"];
+                        CurrentArea = dictArea["Fight (Bow)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Fight (Bow)")
+                    {
+                        CurrentArea = dictArea["Shield (Bow)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Shield (Bow)")
+                    {
+                        CurrentArea = dictArea["Fire Arrow (Bow - Shield)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Push Beast (Bow - Shield)")
+                    {
+                        CurrentArea = dictArea["Stab Eye (Bow - Shield)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Roll (Bow)")
+                    {
+                        CurrentArea = dictArea["Fire Arrow (Bow - Roll)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Fire Arrow (Bow - Roll)")
+                    {
+                        CurrentArea = dictArea["Left Side (Bow - Roll, Arrow)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Fire Arrow (Bow - Shield)")
+                    {
+                        CurrentArea = dictArea["Left Side (Bow - Shield, Arrow)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Stab Eye (Bow - Shield)")
+                    {
+                        CurrentArea = dictArea["Left Side (Bow - Shield, Push)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Stab Eye w/Narrator (Bow - Shield)")
+                    {
+                        CurrentArea = dictArea["Left Side (Bow - Shield, Push)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Jump Kick (Bow - Roll)")
+                    {
+                        CurrentArea = dictArea["Left Side (Bow - Roll, Jump Kick)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Run Away")
+                    {
+                        CurrentArea = dictArea["Lie Flat"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Lie Flat")
+                    {
+                        CurrentArea = dictArea["Wait"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Run Straight")
+                    {
+                        CurrentArea = dictArea["Wait"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Wait")
+                    {
+                        CurrentArea = dictArea["Return to Village"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Return to Village")
+                    {
+                        CurrentArea = dictArea["Twist Arrow"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Twist Arrow")
+                    {
+                        CurrentArea = dictArea["Awakening"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Push Arrow")
+                    {
+                        CurrentArea = dictArea["Awakening"];
                         StartGame();
                     }
                     break;
@@ -578,6 +862,11 @@ namespace AdventuresOf___
                     if (CurrentArea.areaName == "Village")
                     {
                         CurrentArea = dictArea["Pickpocket"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Weapon Selection")
+                    {
+                        CurrentArea = dictArea["Weapon: Bow"];
                         StartGame();
                     }
                     else if (CurrentArea.areaName == "Fight (Saber)")
@@ -625,25 +914,69 @@ namespace AdventuresOf___
                         CurrentArea = dictArea["Left Side (Saber - Sword, Stab)"];
                         StartGame();
                     }
+                    else if (CurrentArea.areaName == "Fight (Bow)")
+                    {
+                        CurrentArea = dictArea["Roll (Bow)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Roll (Bow)")
+                    {
+                        CurrentArea = dictArea["Jump Kick (Bow - Roll)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Shield (Bow)")
+                    {
+                        CurrentArea = dictArea["Push Beast (Bow - Shield)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Jump Kick (Bow - Roll)")
+                    {
+                        CurrentArea = dictArea["Left Side (Bow - Roll, Jump Kick)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Push Beast (Bow - Shield)")
+                    {
+                        CurrentArea = dictArea["Stab Eye w/Narrator (Bow - Shield)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Stab Eye w/Narrator (Bow - Shield)")
+                    {
+                        CurrentArea = dictArea["Left Side (Bow - Shield, Push)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Stab Eye (Bow - Shield)")
+                    {
+                        CurrentArea = dictArea["Left Side (Bow - Shield, Push)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Fire Arrow (Bow - Shield)")
+                    {
+                        CurrentArea = dictArea["Left Side (Bow - Shield, Arrow)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Fire Arrow (Bow - Roll)")
+                    {
+                        CurrentArea = dictArea["Left Side (Bow - Roll, Arrow)"];
+                        StartGame();
+                    }
                     else if (CurrentArea.areaName == "Encounter (Saber)")
                     {
-                        CurrentArea = dictArea["Run Away (Saber)"];
+                        CurrentArea = dictArea["Run Away"];
                         StartGame();
                     }
-                    else if (CurrentArea.areaName == "Run Away (Saber)")
+                    else if (CurrentArea.areaName == "Encounter (Bow)")
                     {
-                        CurrentArea = dictArea["Run Straight (Saber)"];
+                        CurrentArea = dictArea["Run Away"];
                         StartGame();
                     }
-                    else if (CurrentArea.areaName == "Run Straight (Saber)")
+                    else if (CurrentArea.areaName == "Run Away")
                     {
-                        CurrentArea = dictArea["Wait (Saber)"];
+                        CurrentArea = dictArea["Run Straight"];
                         StartGame();
                     }
-
-                    else if (CurrentArea.areaName == "Return to Village (Saber)")
+                    else if (CurrentArea.areaName == "Return to Village")
                     {
-                        CurrentArea = dictArea["Push Arrow (Saber)"];
+                        CurrentArea = dictArea["Push Arrow"];
                         StartGame();
                     }
                     break;
