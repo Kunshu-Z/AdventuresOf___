@@ -728,7 +728,7 @@ namespace AdventuresOf___
                 "Join the skeletal figure",
                 "Refuse the figure"));
 
-            dictArea.Add("Corruption (SoF)", new Area("Corruption (SoF)",
+            dictArea.Add("Corruption (Dark Path)", new Area("Corruption (Dark Path)",
                 "...",
                 $"There is no refusing power...\nYou want this power...\n" +
                 $"To defeat your enemies\nTo go even further beyond mortal comprehension...\n" +
@@ -740,7 +740,7 @@ namespace AdventuresOf___
                 "Continue",
                 "--|--"));
 
-            dictArea.Add("Awakening (SoF)", new Area("Awakening (SoF)",
+            dictArea.Add("Awakening (Dark Path)", new Area("Awakening (Dark Path)",
                 "...",
                 $"The skeletal figure then plunges his hand into your chest, implanting something that causes your body to change rapidly.\n" +
                 $"{Program.playerName}'s body grew to large proportions, their limbs changing into various animal parts - claws and the like.\n" +
@@ -752,7 +752,12 @@ namespace AdventuresOf___
             dictArea.Add("Pickpocket", new Area("Pickpocket",
                 "Village Mart",
                 $"Stranger: Hey! What are you doing?! GET BACK HERE!\n*After reaching a safe space within the village...*\n{Program.playerName}: Right, looks like I'm away from him\n" +
-                $"Now that I have some money, I guess I should get some food.\nI'm starving..." +
+                $"Now that I have some money, I guess I should get some food.\nI'm starving...",
+                "Continue",
+                "--|--"));
+
+            dictArea.Add("Dragon's Den", new Area("Dragon's Den",
+                "Dragon's Den",
                 $"*Enters Restaurant...*" +
                 $"Waiter: Welcome to the Dragon's Den! What would you like to have today?" +
                 $"{Program.playerName}: Just give me the cheapest meal you have." +
@@ -761,6 +766,56 @@ namespace AdventuresOf___
                 $"Waiter: Right, your total comes to 500G.",
                 "Pay the bill",
                 "Dine n' Dash!"));
+
+            dictArea.Add("No Gold?", new Area("No Gold?",
+                "Saber Village",
+                $"Thank you for eating at Dragon's Den! Have a nice day!\n" +
+                $"{Program.playerName}: Well, now I'm out of gold...\n" +
+                $"Random strangers from afar: Man, I'm all out of gold, and we're running out of food to eat\n" +
+                $"Why don't you go to the guild? I've heard they give those with no gold a benefit\n" +
+                $"{Program.playerName}: (Huh, the Guild?)\n" +
+                $"Random strangers from afar: Woah really? I'll go there now!\n" +
+                $"{Program.playerName}: I've gotta find out where this guild is...\n" +
+                $"*Approches Stranger*" +
+                $"{Program.playerName}: Excuse me, but do you know where I would have to go for the Saber Guild?\n" +
+                $"Stranger: Sure I do, it's just down that road over there.",
+                "Continue",
+                "--|--"));
+            
+            dictArea.Add("Dine n' Dash", new Area("Dine n' Dash",
+                "Saber Village",
+                $"Waiter: HEY! YOU'RE NOT GETTING AWAY WITH THIS!\n" +
+                $"GUARDS! THAT PERSON IS RUNNING AWAY WITHOUT HAVING PAID FOR THEIR MEAL! GET THEM!\n" +
+                $"{Program.playerName}: (DARN! Now I have the guards on my tail)\n" +
+                $"Distant voice: I thought you were gonna throw away those potions. They're far too dangerous to sell.\n" +
+                $"{Program.playerName}: I'm starting to get exhausted...",
+                "Turn yourself in",
+                "Grab and throw a potion on the guards"));
+
+            dictArea.Add("Prison", new Area("Prison",
+                "Saber Village Prison",
+                $"Guards: GET THEM!\n" +
+                $"The guards grab {Program.playerName} and sends them to prison.\n" +
+                $"In their cell... {Program.playerName} is bombarded with whispers from an unknown source..." +
+                $"\n{Program.playerName} notices a black tar oozing up from the floor...\n" +
+                $"A skeletal figure appears from the tar, holding a scythe of some sort...\n" +
+                $"{Program.playerName}, taken aback from this is completely speechless.\n" +
+                $"The figure emanates a dark aura that makes the whispers intensify, they're no longer whispers... They're screams...\n" +
+                $"They want you to join the figure\nThey promise power.",
+                "Join the skeletal figure",
+                "Refuse the figure"));
+
+            dictArea.Add("Potion Throw", new Area("Potion Throw",
+                "Saber Village?",
+                $"*{Program.playerName} Grabs and throws potion to the guards*\n" +
+                $"Front Guard: ARGH! CAN'T SEE ANYTHING! SOMEONE GET THEM!\n" +
+                $"{Program.playerName} was nearing the village gate until they notice a black tar slowly bubbling up from the ground...\n" +
+                $"A skeletal figure appears from the tar, holding a scythe of some sort...\n" +
+                $"{Program.playerName}, taken aback from this is completely speechless.\n" +
+                $"The figure emanates a dark aura that makes the whispers intensify, they're no longer whispers... They're screams...\n" +
+                $"They want you to join the figure\nThey promise power.",
+                "Join the skeletal figure",
+                "Refuse the figure"));
         }
 
         //Method to start the game at the starting point
@@ -1098,12 +1153,42 @@ namespace AdventuresOf___
                     }
                     else if (CurrentArea.areaName == "Mysterious Figure (SoF)")
                     {
-                        CurrentArea = dictArea["Corruption (SoF)"];
+                        CurrentArea = dictArea["Corruption (Dark Path)"];
                         StartGame();
                     }
-                    else if (CurrentArea.areaName == "Corruption (SoF)")
+                    else if (CurrentArea.areaName == "Corruption (Dark Path)")
                     {
-                        CurrentArea = dictArea["Awakening (SoF)"];
+                        CurrentArea = dictArea["Awakening (Dark Path)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Pickpocket")
+                    {
+                        CurrentArea = dictArea["Dragon's Den"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Dragon's Den")
+                    {
+                        CurrentArea = dictArea["No Gold?"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "No Gold?")
+                    {
+                        CurrentArea = dictArea["Road to Saber Guild"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Dine n' Dash")
+                    {
+                        CurrentArea = dictArea["Prison"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Prison")
+                    {
+                        CurrentArea = dictArea["Corruption (Dark Path)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Potion Throw")
+                    {
+                        CurrentArea = dictArea["Corruption (Dark Path)"];
                         StartGame();
                     }
                     break;
@@ -1112,12 +1197,6 @@ namespace AdventuresOf___
                     if (CurrentArea.areaName == "Village")
                     {
                         CurrentArea = dictArea["Pickpocket"];
-                        StartGame();
-                    }
-
-                    else if (CurrentArea.areaName == "Pickpocket")
-                    {
-                        CurrentArea = dictArea["Dragon's Den"];
                         StartGame();
                     }
                     else if (CurrentArea.areaName == "Road to Saber Guild")
@@ -1282,7 +1361,27 @@ namespace AdventuresOf___
                     }
                     else if (CurrentArea.areaName == "Mysterious Figure (SoF)")
                     {
-                        CurrentArea = dictArea["Corruption (SoF)"];
+                        CurrentArea = dictArea["Corruption (Dark Path)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Dragon's Den")
+                    {
+                        CurrentArea = dictArea["Dine n' Dash"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Dine n' Dash")
+                    {
+                        CurrentArea = dictArea["Potion Throw"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Prison")
+                    {
+                        CurrentArea = dictArea["Corruption (Dark Path)"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Potion Throw")
+                    {
+                        CurrentArea = dictArea["Corruption (Dark Path)"];
                         StartGame();
                     }
                     break;
