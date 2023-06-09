@@ -752,7 +752,12 @@ namespace AdventuresOf___
             dictArea.Add("Pickpocket", new Area("Pickpocket",
                 "Village Mart",
                 $"Stranger: Hey! What are you doing?! GET BACK HERE!\n*After reaching a safe space within the village...*\n{Program.playerName}: Right, looks like I'm away from him\n" +
-                $"Now that I have some money, I guess I should get some food.\nI'm starving..." +
+                $"Now that I have some money, I guess I should get some food.\nI'm starving...",
+                "Continue",
+                "--|--"));
+
+            dictArea.Add("Dragon's Den", new Area("Dragon's Den",
+                "Dragon's Den",
                 $"*Enters Restaurant...*" +
                 $"Waiter: Welcome to the Dragon's Den! What would you like to have today?" +
                 $"{Program.playerName}: Just give me the cheapest meal you have." +
