@@ -81,6 +81,7 @@
             Margin = new Padding(2);
             Name = "Title";
             Text = "Title";
+            Load += Title_Load;
             ResumeLayout(false);
             PerformLayout();
         }

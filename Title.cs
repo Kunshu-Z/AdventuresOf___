@@ -38,5 +38,10 @@ namespace AdventuresOf___
         {
             this.Close();
         }
+
+        private void Title_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
