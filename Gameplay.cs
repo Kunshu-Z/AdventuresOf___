@@ -759,6 +759,20 @@ namespace AdventuresOf___
                 "Continue",
                 "--|--"));
 
+            dictArea.Add("Insult", new Area("Insult",
+                "Village Mart",
+                $"{Program.playerName}: Maybe I will go to that guild, but only if I want to waste my time!" +
+                $"\nI bet I could find that beast that knocked me out without their help!\n" +
+                $"Stranger: Wha- well excuse me, how dare you insult our village's bastion against the darkness, I think you should leave right now and never return!\n" +
+                $"{Program.playerName}: Well then, disgrace me and kick me out?\n" +
+                $"Then you're not invited to my banquet when I become super powerful, fine I'll just leave.\n" +
+                $"I'll take my power and make my own story. When I find this place again I'm coming for you!\n" +
+                $"Stranger: I've had about enough of you, GUARDS!\n" +
+                $"{Program.playerName}: (Maybe I shouldn't have done that)\n" +
+                $"\nYou start running and notice a potions stand nearby, you're also quite tired.",
+                "Turn yourself in",
+                "Grab and throw a\npotion on the guards"));
+
             dictArea.Add("Dragon's Den", new Area("Dragon's Den",
                 "Dragon's Den",
                 $"*Enters Restaurant...*\n" +
@@ -1195,6 +1209,11 @@ namespace AdventuresOf___
                         CurrentArea = dictArea["Prison"];
                         StartGame();
                     }
+                    else if (CurrentArea.areaName == "Insult")
+                    {
+                        CurrentArea = dictArea["Prison"];
+                        StartGame();
+                    }
                     else if (CurrentArea.areaName == "Prison")
                     {
                         CurrentArea = dictArea["Corruption (Dark Path)"];
@@ -1461,6 +1480,16 @@ namespace AdventuresOf___
                         StartGame();
                     }
                     else if (CurrentArea.areaName == "Dine n' Dash")
+                    {
+                        CurrentArea = dictArea["Potion Throw"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Inquiry")
+                    {
+                        CurrentArea = dictArea["Insult"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Insult")
                     {
                         CurrentArea = dictArea["Potion Throw"];
                         StartGame();
