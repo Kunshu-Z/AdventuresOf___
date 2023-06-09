@@ -1117,7 +1117,7 @@ namespace AdventuresOf___
 
                     else if (CurrentArea.areaName == "Pickpocket")
                     {
-
+                        CurrentArea = dictArea["Dragon's Den"];
                         StartGame();
                     }
                     else if (CurrentArea.areaName == "Road to Saber Guild")
