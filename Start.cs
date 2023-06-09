@@ -21,7 +21,14 @@ namespace AdventuresOf___
 
         private void Confirm_Click(object sender, EventArgs e)
         {
-            Program.playerName = PlayerName.Text;
+            if (string.IsNullOrEmpty(PlayerName.Text))
+            {
+                Program.playerName = "?";
+            }
+            else
+            {
+                Program.playerName = PlayerName.Text;
+            }
             var title = new Title();
             title.FormClosed += Title_FormClosed;
             title.Show();

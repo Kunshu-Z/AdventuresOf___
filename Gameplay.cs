@@ -162,22 +162,22 @@ namespace AdventuresOf___
             dictArea.Add("Shield (Saber)", new Area("Shield (Saber)",
                 "Saber BattleField",
                 "Another needle is lodged into the shield\nThe left of the beast's face is nearing you, something must be done.",
-                "Bash its face with the shield",
-                "Slash the face with your sword"));
+                "Bash its face\nwith the shield",
+                "Slash the face\nwith your sword"));
 
             dictArea.Add("Roll (Saber)", new Area("Roll (Saber)",
                 "Saber BattleField",
                 "You roll into the attack, almost like you phase through the needle. You now stand closer to the beast\n" +
                 "The left of the beast's face is nearing you, something must be done.",
-                "Bash its face with the shield",
-                "Slash the face with your sword"));
+                "Bash its face\nwith the shield",
+                "Slash the face\nwith your sword"));
 
             dictArea.Add("Shield Attack (Saber)", new Area("Shield Attack (Saber)",
                 "Saber BattleField",
                 "The beast is stunned, ithe two shield needles dislodged into the beast's face and the neck is exposed!\n" +
                 "Time slows, perhaps due to simply being in the moment, you should probably attack...",
                 "Stab its neck",
-                "Slash at its closest leg"));
+                "Slash at its\nclosest leg"));
 
             dictArea.Add("Slash Attack (Saber)", new Area("Slash Attack (Saber)",
                 "Saber BattleField",
@@ -186,7 +186,7 @@ namespace AdventuresOf___
                 "The beast turns its head away but then...\n" +
                 "Time slows right as its left eye is facing you, perhaps due to simply being in the moment...\nYou should probably attack.",
                 "Stab its eye",
-                "Slash at its closest leg"));
+                "Slash at its\nclosest leg"));
 
             dictArea.Add("Stab Attack (Saber - Shield)", new Area("Stab Attack (Saber - Shield)",
                 "Saber BattleField",
@@ -386,15 +386,15 @@ namespace AdventuresOf___
                 $"A fired needle gets stuck in your leg, it's very painful\n" +
                 $"The beast then rears onto its hind legs and prepares to slash at you with its bird-like claws.\n" +
                 $"Time slows, perhaps due to simply being in the moment, you should probably attack...",
-                "Quickly fire an arrow into its exposed neck",
-                "Get up and and push into it while its unstable"));
+                "Quickly fire an arrow\ninto its exposed neck",
+                "Get up and and\npush into\nit while its unstable"));
 
             dictArea.Add("Roll (Bow)", new Area("Roll (Bow)",
                 "Saber BattleField",
                 "You roll into the attack, almost like you phase through the needle. You now stand closer to the beast\n" +
                 "The left of the beast's face is nearing you, something must be done.",
                 "Fire an arrow into the beast's eye",
-                "Jump and kick the beast's face then fire an arrow into its eye"));
+                "Jump and kick the beast's face\nthen fire an arrow into its eye"));
 
             dictArea.Add("Push Beast (Bow - Shield)", new Area("Push Beast (Bow - Shield)",
                 "Saber BattleField",
@@ -403,8 +403,8 @@ namespace AdventuresOf___
                 $"Suddenly a needle fires from the beast's tail.\n" +
                 $"{Program.playerName} catches it!? Some wicked reflexes were suddenly instilled within our hero.\n" +
                 $"So now there's a needle in your hand, what to do I wonder?",
-                "Run up to the beast's left eye and stab it",
-                "Stab the beast's left eye while the narrator ridicules it"));
+                "Run up to the beast's\nleft eye and stab it",
+                "Stab the beast's left\neye while the\nnarrator ridicules it"));
 
             dictArea.Add("Stab Eye (Bow - Shield)", new Area("Stab Eye (Bow - Shield)",
                 "Saber BattleField",
@@ -529,7 +529,7 @@ namespace AdventuresOf___
                 $"The beast jumps high into the air and swoops down.\n" +
                 $"It will soon swoop back down and grab you but there's still time! Do Something!",
                 "Lie flat on the ground",
-                "Keep running in a straight line"));
+                "Keep running in\na straight line"));
 
             dictArea.Add("Lie Flat", new Area("Lie Flat",
                 "Road to Saber BattleField",
@@ -562,7 +562,7 @@ namespace AdventuresOf___
                 $"The arrows pierce the beast's neck, causing it to loosen its grip on you. You have enough time to take your arms out.\n" +
                 $"You notice an arrow you can reach close to the beast's belly, you could cause some real damage with it!",
                 "Twist the arrow out",
-                "Push the arrow in deeper"));
+                "Push the arrow\nin deeper"));
 
             dictArea.Add("Twist Arrow", new Area("Twist Arrow",
                 "Saber Village",
@@ -647,7 +647,7 @@ namespace AdventuresOf___
                 $"{Program.playerName}: Three and a half hours for a farm? Really!?" +
                 $"{Program.playerName} needs to let that anger loose, but how?",
                 "Slash at the wheat",
-                "Tear the wheat from their roots"));
+                "Tear the wheat\nfrom their roots"));
 
             dictArea.Add("Weapon: Bow (SoF)", new Area("Weapon: Bow (SoF)",
                 "Road to Sea of Wheat",
@@ -681,8 +681,8 @@ namespace AdventuresOf___
                 "Suddenly you surge with anger." +
                 $"{Program.playerName}: Three and a half hours for a farm? Really!?" +
                 $"{Program.playerName} needs to let that anger loose, but how?",
-                "Shoot arrows at literally nothing",
-                "Tear the wheat from their roots"));
+                "Shoot arrows at\nliterally nothing",
+                "Tear the wheat\nfrom their roots"));
 
             dictArea.Add("Encounter (SoF)", new Area("Encounter (SoF)",
                 "Sea of Wheat",
@@ -758,12 +758,12 @@ namespace AdventuresOf___
 
             dictArea.Add("Dragon's Den", new Area("Dragon's Den",
                 "Dragon's Den",
-                $"*Enters Restaurant...*" +
-                $"Waiter: Welcome to the Dragon's Den! What would you like to have today?" +
-                $"{Program.playerName}: Just give me the cheapest meal you have." +
-                $"Waiter: Right, that's one Dragon style BLT. It will be ready shortly." +
-                $"*After having the food*" +
-                $"Waiter: Right, your total comes to 500G.",
+                $"*Enters Restaurant...*\n" +
+                $"Waiter: Welcome to the Dragon's Den! What would you like to have today?\n" +
+                $"{Program.playerName}: Just give me the cheapest meal you have.\n" +
+                $"Waiter: Right, that's one Dragon style BLT. It will be ready shortly.\n" +
+                $"*After having the food*\n" +
+                $"Waiter: Right, your total comes to 500G.\n",
                 "Pay the bill",
                 "Dine n' Dash!"));
 
@@ -790,7 +790,7 @@ namespace AdventuresOf___
                 $"Distant voice: I thought you were gonna throw away those potions. They're far too dangerous to sell.\n" +
                 $"{Program.playerName}: I'm starting to get exhausted...",
                 "Turn yourself in",
-                "Grab and throw a potion on the guards"));
+                "Grab and throw a\npotion on the guards"));
 
             dictArea.Add("Prison", new Area("Prison",
                 "Saber Village Prison",
@@ -816,6 +816,12 @@ namespace AdventuresOf___
                 $"They want you to join the figure\nThey promise power.",
                 "Join the skeletal figure",
                 "Refuse the figure"));
+
+            dictArea.Add("End", new Area("End",
+                "???",
+                $"???: You may have completed one journey for now, {Program.playerName}. However, there are many paths which lie ahead of you...",
+                "Restart",
+                "End Game"));
         }
 
         //Method to start the game at the starting point
@@ -1191,6 +1197,82 @@ namespace AdventuresOf___
                         CurrentArea = dictArea["Corruption (Dark Path)"];
                         StartGame();
                     }
+                    //Ending
+                    else if (CurrentArea.areaName == "Left Side (Saber - Shield, Stab)")
+                    {
+                        CurrentArea = dictArea["End"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Left Side (Saber - Shield, Slash)")
+                    {
+                        CurrentArea = dictArea["End"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Left Side (Saber - Sword, Slash)")
+                    {
+                        CurrentArea = dictArea["End"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Left Side (Saber - Sword, Stab)")
+                    {
+                        CurrentArea = dictArea["End"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Left Side (Bow - Roll, Arrow)")
+                    {
+                        CurrentArea = dictArea["End"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Left Side (Bow - Shield, Arrow)")
+                    {
+                        CurrentArea = dictArea["End"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Left Side (Bow - Shield, Push)")
+                    {
+                        CurrentArea = dictArea["End"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Left Side (Bow - Shield, Push)")
+                    {
+                        CurrentArea = dictArea["End"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Left Side (Bow - Roll, Jump Kick)")
+                    {
+                        CurrentArea = dictArea["End"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Right Side (Saber - Shield, Stab)")
+                    {
+                        CurrentArea = dictArea["End"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Right Side (Saber - Shield, Slash)")
+                    {
+                        CurrentArea = dictArea["End"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Right Side (Saber - Sword, Slash)")
+                    {
+                        CurrentArea = dictArea["End"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Awakening")
+                    {
+                        CurrentArea = dictArea["End"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "Awakening (Dark Path)")
+                    {
+                        CurrentArea = dictArea["End"];
+                        StartGame();
+                    }
+                    else if (CurrentArea.areaName == "End")
+                    {
+                        CurrentArea = dictArea["Starting"];
+                        StartGame();
+                    }
                     break;
 
                 case 2:
@@ -1383,6 +1465,10 @@ namespace AdventuresOf___
                     {
                         CurrentArea = dictArea["Corruption (Dark Path)"];
                         StartGame();
+                    }
+                    else if (CurrentArea.areaName == "End")
+                    {
+                        this.Close();
                     }
                     break;
             }
