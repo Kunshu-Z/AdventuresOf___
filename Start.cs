@@ -21,20 +21,23 @@ namespace AdventuresOf___
 
         private void Confirm_Click(object sender, EventArgs e)
         {
+            //If statement for if the player inputs nothing for their name, the game will give them the username "?"
             if (string.IsNullOrEmpty(PlayerName.Text))
             {
                 Program.playerName = "?";
             }
+            //If the player has inputted something for their name, the game will use that input
             else
             {
                 Program.playerName = PlayerName.Text;
             }
+            //Creates new variable named title to open Title form and hide the Starting form
             var title = new Title();
             title.FormClosed += Title_FormClosed;
             title.Show();
             this.Hide();
         }
-
+        //Method to close the Starting form after Title form is opened
         private void Title_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Close();

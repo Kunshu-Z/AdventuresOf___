@@ -8,6 +8,7 @@ namespace AdventuresOf___
 {
     public class Player
     {
+        //Field for storing player's name
         public string playerName { get; set; }
     }
 }

@@ -8,14 +8,14 @@ namespace AdventuresOf___
 {
     public class Area
     {
-        //Fields
+        //Fields 
         public string areaName { get; set; }
         public string areaDisplay { get; set; }
         public string areaDescription { get; set; }
         public string optionOne { get; set; }
         public string optionTwo { get; set; }
 
-        //Constructor for Area
+        //Constructor for Area (gets used in dictArea within Gameplay.CS)
         public Area(string areaname, string areadisplay, string areadescription, string optionone, string optiontwo)
         {
             areaName = areaname;

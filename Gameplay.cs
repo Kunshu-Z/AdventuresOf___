@@ -22,6 +22,7 @@ namespace AdventuresOf___
             this.CenterToScreen(); //To center the game to the screen
         }
 
+        //Method to start the game. Calls CreateGame which creates all the dictionary entries, then calls Go to execute the game at the area named "Starting"
         private void Gameplay_Load(object sender, EventArgs e)
         {
             CreateGame();
@@ -40,6 +41,8 @@ namespace AdventuresOf___
         }
 
         //Method for adding new areas into dictionary
+        //Each new dictArea uses the structure of the constructor in Area.CS (string areaname, string areadisplay, string areadescription, string optionone, string optiontwo)
+        //NOTE: Some formatting of the buttons will be off due to certain sections having more text in the buttons + using Auto Size for buttons on form.
         private void CreateGame()
         {
             //Location one - Neutral
@@ -824,7 +827,7 @@ namespace AdventuresOf___
                 "End Game"));
         }
 
-        //Method to start the game at the starting point
+        //Method to start the game at the starting point by setting the CurrentArea to "Starting" then calling StartGame method to display the text
         private void Go()
         {
             CurrentArea = dictArea["Starting"];
@@ -840,18 +843,22 @@ namespace AdventuresOf___
             ChangeOptions();
         }
 
-        //Method to change the buttons to the respective scenario
+        //Method to change the button text to the respective scenario
         private void ChangeOptions()
         {
             button1.Text = CurrentArea.optionOne;
             button2.Text = CurrentArea.optionTwo;
         }
 
+        //Method for if button1 is clicked, it will process case 1 under the ProcessOption method
+        //NOTE: When clicked, it will first check the CurrentArea, then based off the present CurrentArea, it will change the next CurrentArea accordingly
         private void button1_Click(object sender, EventArgs e)
         {
             ProcessOption(1);
         }
 
+        //Method for if button2 is clicked, it will process case 2 under the ProcessOption method
+        //NOTE: When clicked, it will first check the CurrentArea, then based off the present CurrentArea, it will change the next CurrentArea accordingly
         private void button2_Click(object sender, EventArgs e)
         {
             ProcessOption(2);
@@ -861,6 +868,7 @@ namespace AdventuresOf___
         {
             switch (option)
             {
+                //Case 1 for if the user selects button1 (Left button)
                 case 1:
                     if (CurrentArea.areaName == "Starting")
                     {
@@ -1275,6 +1283,7 @@ namespace AdventuresOf___
                     }
                     break;
 
+                //Case 2 for if the user selects button2 (Right button)
                 case 2:
                     if (CurrentArea.areaName == "Village")
                     {
